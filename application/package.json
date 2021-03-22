@@ -1,0 +1,68 @@
+{
+  "name": "commerce",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.3.11",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/drawer": "^5.12.4",
+    "@react-navigation/native": "^5.9.3",
+    "@react-navigation/stack": "^5.14.3",
+    "graphql": "^15.5.0",
+    "lottie-ios": "^2.5.3",
+    "lottie-react-native": "^2.5.11",
+    "mangopay-client-react": "^2.0.2",
+    "mangopay2-nodejs-sdk": "^1.15.0",
+    "react": "16.13.1",
+    "react-native": "0.63.4",
+    "react-native-device-info": "^8.0.6",
+    "react-native-gesture-handler": "^1.10.3",
+    "react-native-modalize": "^2.0.8",
+    "react-native-progress-wheel": "^1.0.5",
+    "react-native-reanimated": "^2.0.0",
+    "react-native-safe-area-context": "^3.2.0",
+    "react-native-screens": "^2.18.1",
+    "react-native-svg": "^12.1.0",
+    "react-native-switch-selector": "^2.1.4",
+    "react-native-textinput-effects": "^0.4.2",
+    "react-native-vector-icons": "^8.1.0",
+    "react-native-webview": "^11.3.1",
+    "soap-everywhere": "^1.0.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/runtime": "^7.8.4",
+    "@react-native-community/eslint-config": "^1.1.0",
+    "@types/jest": "^25.2.3",
+    "@types/react-native": "^0.63.2",
+    "@types/react-native-vector-icons": "^6.4.6",
+    "@types/react-test-renderer": "^16.9.2",
+    "babel-jest": "^25.1.0",
+    "eslint": "^6.5.1",
+    "jest": "^25.1.0",
+    "metro-react-native-babel-preset": "^0.59.0",
+    "react-test-renderer": "16.13.1",
+    "typescript": "^3.8.3"
+  },
+  "resolutions": {
+    "@types/react": "^16"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}

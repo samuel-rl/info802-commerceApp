@@ -1,0 +1,42 @@
+<definitions name="PriceService" targetNamespace="https://info802-serveur-soap.herokuapp.com/pricecalculator?wsdl" 
+  xmlns="http://schemas.xmlsoap.org/wsdl/" 
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+  xmlns:tns="https://info802-serveur-soap.herokuapp.com/pricecalculator?wsdl" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <message name="getPriceRequest">
+    <part name="weight" type="xsd:int"/>
+    <part name="country" type="xsd:string"/>
+  </message>
+
+  <message name="getPriceResponse">
+    <part name="frais" type="xsd:int"/>
+  </message>
+
+  <portType name="Price_PortType">
+    <operation name="calculatePrice">
+      <input message="tns:getPriceRequest"/>
+      <output message="tns:getPriceResponse"/>
+    </operation>
+  </portType>
+
+  <binding name="Price_Binding" type="tns:Price_PortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="calculatePrice">
+      <soap:operation soapAction="calculatePrice"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:examples:helloservice" use="encoded"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:examples:helloservice" use="encoded"/>
+      </output>
+    </operation>
+  </binding>
+
+  <service name="price_Service">
+    <documentation>WSDL File for HelloService</documentation>
+    <port binding="tns:Price_Binding" name="price_Port">
+      <soap:address location="https://info802-serveur-soap.herokuapp.com/pricecalculator?wsdl" />
+    </port>
+  </service>
+</definitions>
